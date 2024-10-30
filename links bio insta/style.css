@@ -1,0 +1,95 @@
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimentos padrão de todos os elementos */
+    box-sizing: content-box; /* Define o cálculo de tamanho apenas com o conteúdo */
+    font-family: sans-serif; /* Define a fonte padrão como sans-serif */
+}
+
+body {
+    color: #000;
+    background-image: url(img/a22ce3b622de28447e36a951af26fa2b.jpg); /* Adiciona uma imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo sem distorcer */
+    background-position: top; /* Posiciona a imagem de fundo na parte superior */
+    color: #ffffff; /* Define a cor do texto como branca */
+}
+
+.link-bio {
+    display: flex; /* Usa o modelo de caixa flexível */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 90%; /* Define a largura como 90% do contêiner pai */
+    margin: 40px auto; /* Adiciona margem de 40px em cima e embaixo, centralizando horizontalmente */
+    gap: 20px; /* Cria um espaço de 20px entre os itens */
+}
+
+.link-bio img {
+    width: 150px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
+    border: solid 1px rgb(15, 15, 15); /* Adiciona uma borda sólida de 1px ao redor da imagem */
+    border-radius: 50%; /* Torna a borda arredondada, criando um efeito circular */
+}
+
+.link-bio h1 {
+    font-size: 40px; /* Define o tamanho da fonte do título */
+}
+
+.link-bio a {
+    background-color: #000; /* Define o fundo do link como preto */
+    color: #ff073a; /* Define a cor do texto como vermelho neon */
+    padding: 10px; /* Define o preenchimento interno do link */
+    width: 50%; /* Define a largura do botão como 50% do seu contêiner */
+    text-decoration: none; /* Remove o sublinhado do texto do link */
+    text-align: center; /* Centraliza o texto dentro do link */
+    font-size: 18px; /* Define o tamanho da fonte do texto do link */
+    font-weight: bold; /* Define o texto como negrito */
+    border: solid 1px #ff073a; /* Adiciona uma borda sólida de 1px ao redor do link */
+    border-radius: 8px; /* Arredonda as bordas do link */
+    box-shadow: 0px 0px 8px #ff073a; /* Adiciona um efeito de brilho neon ao redor do link */
+}
+
+.link-bio a:hover {
+    background-color: #f8798c; /* Altera o fundo do link para um vermelho neon ao passar o mouse */
+    color: #ff073a; /* Altera a cor do texto para preto ao passar o mouse */
+    box-shadow: 0px 0px 15px #ff073a; /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Configurações para o vídeo de fundo */
+.background-video {
+    position: fixed; /* Fixa o vídeo no fundo da página */
+    top: 0; /* Alinha o vídeo ao topo da página */
+    left: 0; /* Alinha o vídeo à esquerda da página */
+    width: 100%; /* Faz o vídeo ocupar 100% da largura da página */
+    height: 100%; /* Faz o vídeo ocupar 100% da altura da página */
+    object-fit: cover; /* Cobre a área do vídeo sem distorcer */
+    z-index: -1; /* Coloca o vídeo atrás de todos os outros conteúdos */
+}
+
+.social-link {
+    display: flex; /* Usa o modelo de caixa flexível */
+    flex-direction: column; /* Alinha os ícones na coluna (um em cima do outro) */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.fade-in {
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 0.6s forwards; /* Aplica a animação de fade in */
+    animation-delay: 0.55s; /* Atraso de 0.5 segundos antes da animação */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Torna o elemento visível no final da animação */
+    }
+}
+
+.social-link svg {
+    width: 2em; /* Define o tamanho padrão do SVG */
+    height: 2em; /* Define o tamanho padrão do SVG */
+    transition: fill 0.3s ease, transform 0.3s ease; /* Suaviza a transição da cor e do tamanho */
+}
+
+.social-link:hover svg {
+    fill: #ff073a; /* Altera a cor do SVG ao passar o mouse */
+    transform: scale(0.8); /* Reduz o tamanho do SVG para 80% ao passar o mouse */
+}
